@@ -1,0 +1,2 @@
+[console_scripts]
+OCRService = run:create_ocr_server

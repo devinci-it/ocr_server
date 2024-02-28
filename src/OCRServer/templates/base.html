@@ -1,0 +1,36 @@
+<!-- OCRServer/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}OCR SERVER{% endblock %}</title>
+    <link rel="icon" href="{{url_for('static',filename='favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='typography.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+<div class="container">
+        <header>
+        <h1 class="title-medium-text">OCRServer</h1>
+    </header>
+
+    <main>
+        <!-- Main content goes here -->
+        {% block content %}{% endblock %}
+
+    <footer>
+
+        <p class="caption-text-footer">&copy; 2024  OCRServer. All rights reserved.</p>
+        <p class="caption-text-footer">Unauthorized access to this service is illegal. We reserve the right to take legal action against any unauthorized users or visitors.</p>
+        <p class="caption-text-footer">By using or visiting this service, you agree to comply with our terms of service and legal policies.</p>
+    </footer>
+
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- OCRServer/templates/index.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}OCRServer{% endblock %}
+
+{% block content %}
+
+
+    <form method="post" enctype="multipart/form-data" action="{{ url_for('demo') }}">
+        {{ form.hidden_tag() }}
+        <label for="image">Upload New Photo:</label>
+        {{ form.image() }}
+       <button type="submit" class="button submit-button">
+
+           SUBMIT
+       </button>
+    </form>
+
+{% endblock %}

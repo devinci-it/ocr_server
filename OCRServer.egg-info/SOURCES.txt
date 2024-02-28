@@ -1,0 +1,16 @@
+README.md
+setup.py
+OCRServer.egg-info/PKG-INFO
+OCRServer.egg-info/SOURCES.txt
+OCRServer.egg-info/dependency_links.txt
+OCRServer.egg-info/entry_points.txt
+OCRServer.egg-info/requires.txt
+OCRServer.egg-info/top_level.txt
+src/__init__.py
+src/run.py
+src/ImageProcessor/ImageProcessor.py
+src/ImageProcessor/__init__.py
+src/OCRServer/OCRServer.py
+src/OCRServer/__init__.py
+src/OCRUtility/OCRUtility.py
+src/OCRUtility/__init__.py

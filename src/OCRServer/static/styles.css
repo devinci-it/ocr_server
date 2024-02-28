@@ -1,0 +1,249 @@
+/* Define colors */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f6f8fa;
+  --text-color: #24292f;
+  --link-color: #0366d6;
+  --link-hover-color: #005cc5;
+  --border-color: #e1e4e8;
+  --icon-color: #586069;
+  --primary-color: #dcdbdb;
+  --accent-color: #24292F;
+  --light-color: #F6F8FA;
+  --icon-color: #c4d6ea; /* Replace with Octoicon Prime light color */
+}
+
+body {
+  background-color: var(--secondary-bg);
+  min-height: 80vh;
+  font-size: 16px; /* Define base font size for rem calculations */
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;}
+
+main{
+    height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+/************************************************
+HEADER STYLES 
+**************************************************/
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0 0;
+  background-color: var(--light-color);
+  color: var(--accent-color);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nexus-header-item {
+  margin: 0 0.3125rem;
+}
+
+.nexus-logo {
+  height: 2.875rem;
+  width: auto;
+  max-width: 5.125rem;
+}
+
+.nexus-form-control.nexus-header-input {
+  width: 100%;
+  padding: 0.625rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.nexus-btn.nexus-btn-search {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.nexus-avatar {
+  border-radius: 50%;
+}
+
+a.nexus-header-link {
+  display: flex;
+  gap: 0.625rem;
+  align-content: center;
+  align-items: flex-end;
+}
+
+@media (max-width: 48em) { /* 768px / 16px base font size */
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #user-icon {
+    margin-top: 0.625rem;
+  }
+
+  a.nexus-header-link {
+    margin: 0.625rem auto;
+  }
+}
+
+/************************************************
+ FOOTER STYLES 
+**************************************************/
+
+.footer-section {
+  display: flex;
+  gap:15px;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  background-color: var(--light-color);
+  color: var(--accent-color);
+}
+.nexus-footer-item nav {
+  gap: 13px;
+  display: flex;
+}
+.container {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nexus-footer-item {
+  margin: 0 0.3125rem;
+}
+
+.nexus-footer-item p {
+  margin: 0;
+}
+
+.nexus-footer-link {
+  margin: 0 0.35rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+@media (max-width: 48em) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nexus-footer-item {
+    margin: 0.625rem auto;
+  }
+}
+
+.container {
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: 45px auto;
+    text-align: center;
+}
+
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 3px 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.status {
+    margin-bottom: 20px;
+}
+
+.logs {
+    margin-top: 20px;
+}
+
+.caption-text{
+  text-transform: uppercase;
+}
+
+.title-small-text{
+  text-align: left;
+  text-transform:uppercase;
+}
+
+p{
+  text-align: left;
+}
+
+h2{
+    margin-bottom: 15px;
+  border-bottom: solid 1px var(--border-color);
+}
+main{
+  text-align: left;
+  min-width: 40%;
+  border-top: solid 1px var(--border-color);
+
+}
+
+.caption-text-footer{
+  color: #c4c4c4;
+  max-width: 55ch;
+  font-size: 8px;
+  padding:8px 0
+}
+
+
+.dot{
+    border-radius: 50%;
+  position: relative;
+  aspect-ratio: 1;
+    max-width: 15px;
+  margin: 5px;
+  border-bottom: solid 1px var(--border-color);
+
+
+}
+
+.idle{
+  background-color:#c4c4c4 ;
+}
+
+.processing{
+  background-color:#ffca28;
+}
+.error{
+  background-color: #ff5252;
+}
+.ready{
+  background-color: #4caf50;
+}
+
+.dot::before{
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+}

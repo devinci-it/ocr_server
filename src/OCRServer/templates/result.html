@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}OCRServer{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>OCR Result</h2>
+        <textarea id="resultTextArea" rows="10" cols="50" >{{ extracted_text }}</textarea>
+    </div>
+        <img src="file://{{ tmp_file_path }}" alt="Uploaded Photo" style="max-width: 100%; height: auto;">
+
+    <div>
+        <button class="button submit-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+        <button class="button submit-button" onclick="saveToFile()">Save to File</button>
+        <a href="{{ url_for('demo') }}"><button class="button submit-button">Try OCR Again</button></a>
+       </div>
+ <script>
+        function copyToClipboard() {
+            var textarea = document.getElementById("resultTextArea");
+            textarea.select();
+            document.execCommand("copy");
+        }
+
+        function saveToFile() {
+            var textarea = document.getElementById("resultTextArea");
+            var blob = new Blob([textarea.value], { type: "text/plain" });
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "ocr_result.txt";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+
+{% endblock %}
+
